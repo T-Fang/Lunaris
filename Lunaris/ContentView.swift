@@ -9,28 +9,63 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var selection = 0
- 
+    @Environment(\.managedObjectContext) var context
+    @FetchRequest(fetchRequest: Module.fetchRequest(.all)) var allModules: FetchedResults<Module>
+    
+    func resetAllModules() {
+        for module in allModules {
+            for announcement in module.announcements {
+                context.delete(announcement)
+            }
+            for conference in module.conferences {
+                context.delete(conference)
+            }
+            for fileInfo in module.fileInfos {
+                context.delete(fileInfo)
+            }
+            context.delete(module)
+        }
+        Module.updateAll(context: context)
+    }
+    
     var body: some View {
-        TabView(selection: $selection){
-            Text("First View")
-                .font(.title)
+        //        TodoList().onAppear{
+        //            Module.updateAll(context: self.context)
+        //        }
+        //        ModuleList()
+        //        Dashboard()
+        
+        return TabView {
+            Dashboard()
                 .tabItem {
-                    VStack {
-                        Image("first")
-                        Text("First")
-                    }
-                }
-                .tag(0)
-            Text("Second View")
-                .font(.title)
+                    Image(systemName: "house")
+                    Text("Dashboard")
+            }
+            
+            ModuleList()
                 .tabItem {
-                    VStack {
-                        Image("second")
-                        Text("Second")
-                    }
-                }
-                .tag(1)
+                    Image(systemName: "book")
+                    Text("Modules")
+            }.onAppear{
+                Module.updateAll(context: self.context)
+            }
+            
+            DownloadList()
+                .tabItem {
+                    Image(systemName: "icloud.and.arrow.down")
+                    Text("Downloads")
+            }
+            
+            TodoList()
+                .tabItem {
+                    Image(systemName: "calendar")
+                    Text("Tasks")
+            }
+            
+            
+        }
+        .onAppear{
+            self.resetAllModules()
         }
     }
 }

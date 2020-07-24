@@ -1,4 +1,45 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="true" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19G73" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Announcement" representedClassName="Announcement" syncable="YES" codeGenerationType="class">
+        <attribute name="announcedAt_" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="body_" optional="YES" attributeType="String"/>
+        <attribute name="title_" optional="YES" attributeType="String"/>
+        <relationship name="module_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Module" inverseName="announcements_" inverseEntity="Module"/>
+    </entity>
+    <entity name="Conference" representedClassName="Conference" syncable="YES" codeGenerationType="class">
+        <attribute name="link_" optional="YES" attributeType="String"/>
+        <attribute name="meetingDate_" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="topic_" optional="YES" attributeType="String"/>
+        <relationship name="module_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Module" inverseName="conferences_" inverseEntity="Module"/>
+    </entity>
+    <entity name="FileInfo" representedClassName="FileInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="fileName_" optional="YES" attributeType="String"/>
+        <attribute name="fileSize_" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="fileType_" optional="YES" attributeType="String"/>
+        <attribute name="fileUrl_" optional="YES" attributeType="String"/>
+        <relationship name="module_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Module" inverseName="fileInfos_" inverseEntity="Module"/>
+    </entity>
+    <entity name="Module" representedClassName="Module" syncable="YES" codeGenerationType="class">
+        <attribute name="digits_" optional="YES" attributeType="String"/>
+        <attribute name="name_" optional="YES" attributeType="String"/>
+        <attribute name="overview_" optional="YES" attributeType="String"/>
+        <attribute name="prefix_" optional="YES" attributeType="String"/>
+        <relationship name="announcements_" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Announcement" inverseName="module_" inverseEntity="Announcement"/>
+        <relationship name="conferences_" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Conference" inverseName="module_" inverseEntity="Conference"/>
+        <relationship name="fileInfos_" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FileInfo" inverseName="module_" inverseEntity="FileInfo"/>
+    </entity>
+    <entity name="Todo" representedClassName="Todo" syncable="YES" codeGenerationType="class">
+        <attribute name="checked" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="dueDate_" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="note_" optional="YES" attributeType="String"/>
+        <attribute name="title_" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Announcement" positionX="153.16796875" positionY="-64.5078125" width="128" height="103"/>
+        <element name="Conference" positionX="176.9921875" positionY="76.6328125" width="128" height="103"/>
+        <element name="FileInfo" positionX="146.5390625" positionY="228.65234375" width="128" height="118"/>
+        <element name="Module" positionX="-180.85546875" positionY="59.59765625" width="128" height="148"/>
+        <element name="Todo" positionX="-177.1796875" positionY="-151.6796875" width="128" height="118"/>
+    </elements>
 </model>
