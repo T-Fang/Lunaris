@@ -8,6 +8,7 @@
 
 import CoreData
 import Combine
+import UserNotifications
 extension Todo: Identifiable {
     static func withTitle (_ title: String, context: NSManagedObjectContext) -> Todo {
         let request = fetchRequest(NSPredicate(format: "title_ = %@", title))
@@ -77,9 +78,39 @@ extension Todo: Identifiable {
         return fetchRequest(predicate)
     }
     
+    static func completeTask(title: String, context: NSManagedObjectContext) {
+        let todo = self.withTitle(title, context: context)
+        todo.check()
+    }
     
+    static func clearPendingNotification(for todo: Todo) {
+        center.removePendingNotificationRequests(withIdentifiers: [todo.id!.uuidString])
+    }
+    
+    static func addNotification(for todo: Todo){
+        self.clearPendingNotification(for: todo)
+        let content = UNMutableNotificationContent()
+        content.title = todo.title
+        content.subtitle = todo.note
+        content.sound = UNNotificationSound.default
+        content.categoryIdentifier = "Task Action"
+        
+        let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: todo.dueDate)
+        
+        //            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let request = UNNotificationRequest(identifier: todo.id!.uuidString, content: content, trigger: trigger)
+        
+        center.add(request)
+    }
     
     func check () -> Void {
+        self.checked = true
+        try? managedObjectContext!.save()
+    }
+    
+    func toggle() {
         self.checked.toggle()
         try? managedObjectContext!.save()
     }

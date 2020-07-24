@@ -16,17 +16,20 @@ struct SearchListHeader: View {
     var body: some View {
         VStack {
             HStack {
-                HStack {
-                    Text(title)
-                        .lineLimit(2)
-                        .modifier(FontModifier(size:30, weight: .bold))
+                Text(title)
+                    .lineLimit(2)
+                    .modifier(FontModifier(size:30, weight: .bold))
+                Spacer()
+                VStack {
+                    Spacer()
+                    CloseButtion(showDetail: self.$showDetail).padding(.trailing,30)
                     Spacer()
                 }
-                CloseButtion(showDetail: self.$showDetail).padding(.trailing,30)
             }
+            .frame(height: 72)
             .padding(.leading, 32)
             .padding(.top, 20)
-            .offset(y: 10)
+            .padding(.bottom, -20)
             
             SearchBar(text: self.$searchText)
                 .padding()
@@ -38,6 +41,6 @@ struct SearchListHeader: View {
 
 struct SearchListHeader_Previews: PreviewProvider {
     static var previews: some View {
-        SearchListHeader(title: "Announcements", searchText: .constant(""), showDetail: .constant(true))
+        SearchListHeader(title: "All\nAnnouncements", searchText: .constant(""), showDetail: .constant(true))
     }
 }

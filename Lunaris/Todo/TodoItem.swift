@@ -10,64 +10,13 @@ import SwiftUI
 import UserNotifications
 
 struct TodoItem: View {
+    @Environment(\.managedObjectContext) var context
     @ObservedObject var todo: Todo
     @State var showDetail: Bool = false
     
-    @State var authorized = true
     @State var showAlert = false
+
     
-    let center = UNUserNotificationCenter.current()
-    
-    
-    func clearPendingNotification(for todo: Todo) {
-        center.removePendingNotificationRequests(withIdentifiers: [todo.id!.uuidString])
-    }
-    
-    func addNotification(for todo: Todo) {
-        center.setNotificationCategories([notificationCategory])
-        
-        func send() {
-            
-        }
-        
-        let addRequest = {
-            let content = UNMutableNotificationContent()
-            content.title = todo.title
-            content.subtitle = todo.note
-            content.sound = UNNotificationSound.default
-            content.categoryIdentifier = "action"
-            
-            let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: todo.dueDate)
-            
-            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
-            
-            // let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-            
-            let request = UNNotificationRequest(identifier: todo.id!.uuidString, content: content, trigger: trigger)
-            self.center.add(request)
-        }
-        
-        self.clearPendingNotification(for: todo)
-        
-        center.getNotificationSettings { settings in
-            if settings.authorizationStatus == .authorized {
-                addRequest()
-            }
-            else {
-                self.center.requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
-                    if success {
-                        addRequest()
-                    } else {
-                        self.showAlert.toggle()
-                        self.authorized = false
-                        print("Unable to get notification authorization")
-                    }
-                }
-            }
-        }
-        
-        
-    }
     
     var body: some View {
         HStack {
@@ -106,13 +55,33 @@ struct TodoItem: View {
                 self.showDetail.toggle()
             }
             .sheet(isPresented: $showDetail, onDismiss: {
-                self.addNotification(for: self.todo)
+                center.getNotificationSettings { settings in
+                    if !self.todo.checked{
+                        if settings.authorizationStatus == .authorized {
+                            Todo.addNotification(for: self.todo)
+                        }
+                        else {
+                            center.requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+                                if success {
+                                    Todo.addNotification(for: self.todo)
+                                } else {
+                                    self.showAlert.toggle()
+                                    print("Unable to get notification authorization")
+                                }
+                            }
+                        }
+                    }
+                }
+                
             }) {
                 TodoDetail(todo: self.todo, isShowing: self.$showDetail)
             }
             
             Button(action: {
-                self.todo.check()
+                self.todo.toggle()
+                if self.todo.checked {
+                    Todo.clearPendingNotification(for: self.todo)
+                }
             }) {
                 HStack {
                     VStack {
@@ -124,11 +93,6 @@ struct TodoItem: View {
                     Spacer()
                         .frame(width: 14)
                 }
-            }
-        }
-        .onAppear{
-            NotificationCenter.default.addObserver(forName: NSNotification.Name("completeTask"), object: nil, queue: .main) { _ in
-                self.todo.check()
             }
         }
         .background(Color(self.todo.checked ? "todoItem-bg-checked" : "todoItem-bg"))

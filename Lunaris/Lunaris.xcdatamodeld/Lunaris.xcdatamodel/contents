@@ -7,6 +7,7 @@
         <relationship name="module_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Module" inverseName="announcements_" inverseEntity="Module"/>
     </entity>
     <entity name="Conference" representedClassName="Conference" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="link_" optional="YES" attributeType="String"/>
         <attribute name="meetingDate_" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="topic_" optional="YES" attributeType="String"/>
@@ -37,7 +38,7 @@
     </entity>
     <elements>
         <element name="Announcement" positionX="153.16796875" positionY="-64.5078125" width="128" height="103"/>
-        <element name="Conference" positionX="176.9921875" positionY="76.6328125" width="128" height="103"/>
+        <element name="Conference" positionX="176.9921875" positionY="76.6328125" width="128" height="118"/>
         <element name="FileInfo" positionX="146.5390625" positionY="228.65234375" width="128" height="118"/>
         <element name="Module" positionX="-180.85546875" positionY="59.59765625" width="128" height="148"/>
         <element name="Todo" positionX="-177.1796875" positionY="-151.6796875" width="128" height="118"/>

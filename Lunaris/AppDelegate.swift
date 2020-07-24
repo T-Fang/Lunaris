@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import UserNotifications
+import SwiftUI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDelegate {
@@ -41,8 +42,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
     
     //MARK: Notification
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        if response.actionIdentifier == "complete"{
-            NotificationCenter.default.post(name: NSNotification.Name("completeTask"), object: nil)
+        let content = response.notification.request.content
+        switch response.actionIdentifier {
+        case "COMPLETE":
+            let title = content.title
+            Todo.completeTask(title: title, context: persistentContainer.viewContext)
+        case "OPEN_LINK":
+            let link = content.subtitle
+            UIApplication.shared.open(URL(string: link)!)
+        default: break
         }
     }
     

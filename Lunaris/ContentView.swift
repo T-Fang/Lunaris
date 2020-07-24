@@ -66,6 +66,7 @@ struct ContentView: View {
         }
         .onAppear{
             self.resetAllModules()
+            center.setNotificationCategories(notificationCategories)
         }
     }
 }

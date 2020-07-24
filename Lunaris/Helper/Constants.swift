@@ -27,9 +27,14 @@ let client = Client(spaceId: "nst9eyb0hkt5", accessToken: "bfOoe9_nxBXD7PNXQADC_
 
 let screen = UIScreen.main.bounds
 
-let complete = UNNotificationAction(identifier: "complete", title: "Complete", options: .foreground)
-let dismiss = UNNotificationAction(identifier: "dismiss", title: "Dismiss", options: .destructive)
-let notificationCategory = UNNotificationCategory(identifier: "action", actions: [complete, dismiss], intentIdentifiers: [])
+
+let center = UNUserNotificationCenter.current()
+let complete = UNNotificationAction(identifier: "COMPLETE", title: "Complete", options: .foreground)
+let openLink = UNNotificationAction(identifier: "OPEN_LINK", title: "Open Link", options: .foreground)
+let dismiss = UNNotificationAction(identifier: "DISMISS", title: "Dismiss", options: .destructive)
+let notificationCategoryOfTask = UNNotificationCategory(identifier: "Task Action", actions: [complete, dismiss], intentIdentifiers: [])
+let notificationCategoryOfConference = UNNotificationCategory(identifier: "Conference Action", actions: [openLink, dismiss], intentIdentifiers: [])
+let notificationCategories: Set<UNNotificationCategory> = [notificationCategoryOfTask, notificationCategoryOfConference]
 
 
 let moduleCardHeight: CGFloat = 165

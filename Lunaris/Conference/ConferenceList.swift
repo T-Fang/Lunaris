@@ -17,7 +17,7 @@ struct ConferenceList: View {
     var body: some View {
         ScrollView(showsIndicators: false){
             VStack {
-                SearchListHeader(title: "\(module.prefix + module.digits) Conferences", searchText: self.$searchText, showDetail: self.$showDetail)
+                SearchListHeader(title: "\(module.prefix + module.digits)\nConferences", searchText: self.$searchText, showDetail: self.$showDetail)
                 
                 ForEach(self.module.conferences.filter({self.searchText.isEmpty ? true: $0.topic.includes(searchText) || ($0.module.prefix + $0.module.digits).includes(searchText)})) { conference in
                     ConferenceCard(conference: conference)

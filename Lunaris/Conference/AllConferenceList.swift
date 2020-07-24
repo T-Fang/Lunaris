@@ -14,6 +14,9 @@ struct AllConferenceList: View {
     
     @Binding var showDetail: Bool
     
+    
+    
+    
     var body: some View {
         ScrollView(showsIndicators: false){
             VStack {
@@ -24,7 +27,9 @@ struct AllConferenceList: View {
                 }
                 Spacer()
             }
+            
         }
+        
     }
 }
 

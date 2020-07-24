@@ -10,16 +10,45 @@ import SwiftUI
 
 struct ConferenceCard: View {
     @ObservedObject var conference: Conference
+    @State var showAlert = false
+    
     
     var body: some View {
         VStack {
             HStack {
                 VStack(alignment: .leading, spacing: 6) {
-                    Text(self.conference.topic)
-                        .foregroundColor(.black)
-                        .lineLimit(2)
-                        .modifier(FontModifier(size: 20, weight: .semibold))
-                    
+                    HStack{
+                        Text(self.conference.topic)
+                            .foregroundColor(.black)
+                            .lineLimit(2)
+                            .modifier(FontModifier(size: 20, weight: .semibold))
+                            .alert(isPresented: self.$showAlert) {
+                                Alert(title: Text("Plase enable notifications"), message: Text("Please go to Settings -> Notifications -> Lunaris -> Allow Notification and enable the option"), dismissButton: .cancel(Text("OK")))
+                        }
+                        
+                        Spacer()
+                        
+                        Button(action: {
+                            center.getNotificationSettings { settings in
+                                if settings.authorizationStatus == .authorized {
+                                    Conference.addNotification(for: self.conference)
+                                }
+                                else {
+                                    center.requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+                                        if success {
+                                            Conference.addNotification(for: self.conference)
+                                        } else {
+                                            self.showAlert.toggle()
+                                            print("Unable to get notification authorization")
+                                        }
+                                    }
+                                }
+                            }
+                            
+                        }) {
+                            Image(systemName: "bell").iconify()
+                        }
+                    }
                     Text(self.conference.link)
                         .font(.footnote)
                         .foregroundColor(Color("todoItemSubTitle"))

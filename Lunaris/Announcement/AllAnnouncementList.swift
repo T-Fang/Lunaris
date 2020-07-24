@@ -17,7 +17,7 @@ struct AllAnnouncementList: View {
         ScrollView(showsIndicators: false){
             VStack {
                 
-                SearchListHeader(title: "All Announcements", searchText: self.$searchText, showDetail: self.$showDetail)
+                SearchListHeader(title: "All\nAnnouncements", searchText: self.$searchText, showDetail: self.$showDetail)
                 
                 ForEach(self.allAnnouncements.filter({self.searchText.isEmpty ? true: $0.title.includes(searchText) || ($0.module.prefix + $0.module.digits).includes(searchText)})) { announcement in
                     AnnouncementCard(announcement: announcement)
