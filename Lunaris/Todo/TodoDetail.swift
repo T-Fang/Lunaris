@@ -15,7 +15,7 @@ struct TodoDetail: View {
     var body: some View {
         VStack(spacing: 0) {
             ZStack {
-                Text("Palette Editor").font(.headline).padding()
+                Text("Task Detail").font(.headline).padding()
                 HStack {
                     Spacer()
                     Button(action: {
