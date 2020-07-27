@@ -97,9 +97,9 @@ extension Todo: Identifiable {
         
         let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: todo.dueDate)
         
-        //            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        //        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
         let request = UNNotificationRequest(identifier: todo.id!.uuidString, content: content, trigger: trigger)
         
         center.add(request)

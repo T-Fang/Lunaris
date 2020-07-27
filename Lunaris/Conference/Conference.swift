@@ -64,9 +64,9 @@ extension Conference: Identifiable {
         
         let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: conference.meetingDate)
         
-        //            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        //        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
         
         let request = UNNotificationRequest(identifier: conference.id!.uuidString, content: content, trigger: trigger)
         center.add(request)
