@@ -1,11 +1,19 @@
 # Lunaris
 Orbital Project by SaturnV @ 2020 NUS
 
+![Lunaris-Logo](https://user-images.githubusercontent.com/61874388/142764140-114c4524-27cf-4ab3-bb1c-5838d4e6fa27.png)
+
+
 **Video Demo**: https://drive.google.com/file/d/117pu0us7uZf91ahyFrj7yLDdKCTZATnA/view?usp=sharing
 
 **Team Name:** SaturnV
 **Proposed Level of Achievement:** Apollo 11
 **![img](https://lh5.googleusercontent.com/6YFsfiohQVBSPWsJS9szBLC_4pdS1sqyZa1iyYnLnC0ZWaHdRaAKznOnOIqT4jXukALqjunYoZmOqy8tO-TScoUF--w_2im-7gh10gNgQVbt6AxmX2U8TXIVZXHHPivM__-CzGLC)**
+
+### Description
+
+**Lunaris is a nice-looking NUS LumiNUS iOS client written in Swift. It has File downloading & management features as well as a built-in task management system combined with the announcement & conferencing features.**
+
 
 **Motivation** 
 
@@ -44,17 +52,28 @@ Features to be completed by the mid of July:
 
 **Please watch the video for a full hand-on demo**
 
-**Dashboard**![img](https://lh5.googleusercontent.com/4ztAuByPQJXOGzfmb19oQbt6nHXaAJi9r_bkLnHJOZcrXWpWS_IsspbLi5q6V0VpnoMVtsDVzyt1DGERH6uhkMyIFt1wh6pBIONfTuNwovhyVlgWvVEYjkTt6LkjUF5qcYqAW99E)![img](https://lh3.googleusercontent.com/72sGN6UYDBlkvUQbTMRACnRvOhYxTSYy--mIf5l6DC0cjbt-6kr-aR7fpd2lJ2__YWOiNCctaa8JbjGLwiDAxwvf2NBMcNJXkK4T44fS5c_07YUoineqsAKMucd0jXJ--Q58mD12)![img](https://lh6.googleusercontent.com/-xGcc28nF3xYWxykZevij-UN46BnIY5TKLwMeYAIulDaVUxczAYR3C7jvaLZPeBuoz4GhaoibD7qVRfCdKrpF9akEU0ptS-C841VZtjx4VTZHuzSlZacoj2RIWtxnzbusg3Jz6lb)
+**Dashboard**
+
+![img](https://lh5.googleusercontent.com/4ztAuByPQJXOGzfmb19oQbt6nHXaAJi9r_bkLnHJOZcrXWpWS_IsspbLi5q6V0VpnoMVtsDVzyt1DGERH6uhkMyIFt1wh6pBIONfTuNwovhyVlgWvVEYjkTt6LkjUF5qcYqAW99E)
+![img](https://lh3.googleusercontent.com/72sGN6UYDBlkvUQbTMRACnRvOhYxTSYy--mIf5l6DC0cjbt-6kr-aR7fpd2lJ2__YWOiNCctaa8JbjGLwiDAxwvf2NBMcNJXkK4T44fS5c_07YUoineqsAKMucd0jXJ--Q58mD12)
+![img](https://lh6.googleusercontent.com/-xGcc28nF3xYWxykZevij-UN46BnIY5TKLwMeYAIulDaVUxczAYR3C7jvaLZPeBuoz4GhaoibD7qVRfCdKrpF9akEU0ptS-C841VZtjx4VTZHuzSlZacoj2RIWtxnzbusg3Jz6lb)
 Cards showing modules taken this semester with fantastic animationShow upcoming eventsChange Preference (Appearance, Language, etc)Quick access to todo listNice animation revealing the preference tab
 
-**Modules**![img](https://lh5.googleusercontent.com/ZtqUtrC2JusAysyOk_FZOr_-bmpEF2ZqaElmqvr7hLFv3SQ-PHb9XIC1bJQIkB6PcLpgJYdLMRYFdIA6mAgqfKJQPDK_5qAbW7Zftk-5W8qyAynX0q6L59picjscIvZ6WmE0rZKK)![img](https://lh3.googleusercontent.com/GIN98bBkc4-mPcrSMrzyRZuZb6VIXnhLjYA4ORxemqz5c3AB790NtJpn0YQktTIqYmdWhpX6Nqo7JLkrCDAis70ce_avuCOFQ_IlT3spjoZ2VKXVY9letqA-qNxedcNdgoR23HYT)
+**Modules**
+
+![img](https://lh5.googleusercontent.com/ZtqUtrC2JusAysyOk_FZOr_-bmpEF2ZqaElmqvr7hLFv3SQ-PHb9XIC1bJQIkB6PcLpgJYdLMRYFdIA6mAgqfKJQPDK_5qAbW7Zftk-5W8qyAynX0q6L59picjscIvZ6WmE0rZKK)
+![img](https://lh3.googleusercontent.com/GIN98bBkc4-mPcrSMrzyRZuZb6VIXnhLjYA4ORxemqz5c3AB790NtJpn0YQktTIqYmdWhpX6Nqo7JLkrCDAis70ce_avuCOFQ_IlT3spjoZ2VKXVY9letqA-qNxedcNdgoR23HYT)
 List of module taken this semesterSmooth transition to show the detailed information of a specific moduledetailed page showing announcements, files, etc
 
-**Downloads**![img](https://lh5.googleusercontent.com/psvpnFo9rWc8fE5CS0MhQIgekpOVitz6NxcA98BdtSexuvg7rxzcPwptUq_gMxJ9X1FdPoIwP6Fo0d95VLBnwshH0fpFobDID5VfuvTeVJDmJvnjxmZVfgrZzsiuXgjoQMdpkp6X)![img](https://lh6.googleusercontent.com/eMTA8GlE3X2ih8oeUZvrF54RIGbIieTrvwFiCM5i3ln3m2tSBN1dSOgc913PmVu0vpZm4LNhji_H4RTwQnYLjairxIAYsHNcR9UEUVSUI4S6YxDtSFZnER1oeIvk1f304pOUPYE8)Shows all downloadable files from LumiNUSShows all downloading files, with a circle progress bar to indicate progressShows all finished downloading tasksA button to show everything in the Files app of iOS
+**Downloads**
+
+![img](https://lh5.googleusercontent.com/psvpnFo9rWc8fE5CS0MhQIgekpOVitz6NxcA98BdtSexuvg7rxzcPwptUq_gMxJ9X1FdPoIwP6Fo0d95VLBnwshH0fpFobDID5VfuvTeVJDmJvnjxmZVfgrZzsiuXgjoQMdpkp6X)
+![img](https://lh6.googleusercontent.com/eMTA8GlE3X2ih8oeUZvrF54RIGbIieTrvwFiCM5i3ln3m2tSBN1dSOgc913PmVu0vpZm4LNhji_H4RTwQnYLjairxIAYsHNcR9UEUVSUI4S6YxDtSFZnER1oeIvk1f304pOUPYE8)Shows all downloadable files from LumiNUSShows all downloading files, with a circle progress bar to indicate progressShows all finished downloading tasksA button to show everything in the Files app of iOS
 
 **Tasks**
 
-![img](https://lh5.googleusercontent.com/hGjacNl_NABsgHM3J0S4FGSWTsdKP4KDV3jIlbS04Q4GkRjJupAFzy0wHJYFx-DphFD-sfeGNs9qBwDAKdhdbuhXO1r_FkO4bHTr2ndnAbQYq3Z5WHKF7sW-ybstz9GxHoFQXear)![img](https://lh4.googleusercontent.com/BXUiMt9QhVrXhbEU_lDda1J3PJJ4ApvYicUdV1dlY_sSojuXqtyd0u_Y5TxkibRLPN2K30pUg_a7F1eZV4A2t13-M0fFG1ebL_vCbUFinyB4cCsJzp25IGWj1jDzeMln3LgF6eR6)Default to be retrieved from LumiNUS Tasks section or Conferencing section.Allow users’ customisationadd new tasks or scheduled meetingsdelete existing tasks or scheduled meetings (maybe someone of the same group has submitted and no need for you to work on this anymore, or scheduled meetings that are not your time slot)modify tasks or scheduled meetingsBuilt with iOS native technologiesSwiftUICoreData, such that the app can maintain the effects of user's operations later
+![img](https://lh5.googleusercontent.com/hGjacNl_NABsgHM3J0S4FGSWTsdKP4KDV3jIlbS04Q4GkRjJupAFzy0wHJYFx-DphFD-sfeGNs9qBwDAKdhdbuhXO1r_FkO4bHTr2ndnAbQYq3Z5WHKF7sW-ybstz9GxHoFQXear)
+![img](https://lh4.googleusercontent.com/BXUiMt9QhVrXhbEU_lDda1J3PJJ4ApvYicUdV1dlY_sSojuXqtyd0u_Y5TxkibRLPN2K30pUg_a7F1eZV4A2t13-M0fFG1ebL_vCbUFinyB4cCsJzp25IGWj1jDzeMln3LgF6eR6)Default to be retrieved from LumiNUS Tasks section or Conferencing section.Allow users’ customisationadd new tasks or scheduled meetingsdelete existing tasks or scheduled meetings (maybe someone of the same group has submitted and no need for you to work on this anymore, or scheduled meetings that are not your time slot)modify tasks or scheduled meetingsBuilt with iOS native technologiesSwiftUICoreData, such that the app can maintain the effects of user's operations later
 
 **Problems encountered and further feathers to add**
 
@@ -74,7 +93,11 @@ Since there are no working LumiNUS APIs for now, the default data of the app is 
 
 video link: https://drive.google.com/file/d/117pu0us7uZf91ahyFrj7yLDdKCTZATnA/view?usp=sharing
 
-**Dashboard**![img](https://lh6.googleusercontent.com/MPIDAIf1w56Mpta3qhrccgGfFAhrMTwuHW9rcIo8p6de30svrFt0c5V-Bb-fID_82RNst8pqKyZGDBXZwkL__AMDZg7N-oHH7E3mVted1CI3fjlELGn5nNQviiezyZ6mm5GcDmoE)![img](https://lh3.googleusercontent.com/9YqO1_D-BGxHhaL0TmvOML0vjVbd5hxssTSqj6hEJ9CWJD1Nl-pv9hnKTjjYTzwKgGaxhc4tlxc_HAQIl2eSbuV4D3Z3Zdo9zlKCxP08bPV2oZ6SJxLVk7s-qHyqiI_hoZ5NgkTq)![img](https://lh6.googleusercontent.com/wFJisx_cae_T57mPslfZDCuGZZ0hIu_AN8ORavHeCInicMOXbgxjVybz6RzTRlZy2ty7A9VzUTBTmpkN4CggClA9TpuajMflu6gZNPUZXpob16Za3gmfEJ1LPaeMdSO01zvWEODY)
+**Dashboard**
+
+![img](https://lh6.googleusercontent.com/MPIDAIf1w56Mpta3qhrccgGfFAhrMTwuHW9rcIo8p6de30svrFt0c5V-Bb-fID_82RNst8pqKyZGDBXZwkL__AMDZg7N-oHH7E3mVted1CI3fjlELGn5nNQviiezyZ6mm5GcDmoE)
+![img](https://lh3.googleusercontent.com/9YqO1_D-BGxHhaL0TmvOML0vjVbd5hxssTSqj6hEJ9CWJD1Nl-pv9hnKTjjYTzwKgGaxhc4tlxc_HAQIl2eSbuV4D3Z3Zdo9zlKCxP08bPV2oZ6SJxLVk7s-qHyqiI_hoZ5NgkTq)
+![img](https://lh6.googleusercontent.com/wFJisx_cae_T57mPslfZDCuGZZ0hIu_AN8ORavHeCInicMOXbgxjVybz6RzTRlZy2ty7A9VzUTBTmpkN4CggClA9TpuajMflu6gZNPUZXpob16Za3gmfEJ1LPaeMdSO01zvWEODY)
 
 1. Added a refresh button to fetch new dataAdded notification feature for conferences. 
 
@@ -86,14 +109,23 @@ video link: https://drive.google.com/file/d/117pu0us7uZf91ahyFrj7yLDdKCTZATnA/vi
 
    **Modules**
 
-   *![img](https://lh5.googleusercontent.com/zZMAALMJsHi5TOu-SikN2rzuD7CXyZaLw2Bsk04eTkrfGWmrJbdZO6nysJFkACgxfkajOl7U40APc9NepDLJP1i2aw6x4vfnsKFklC2ytFt3IRFAVcHVYkFNf7RkrawzygZpJwLT)![img](https://lh6.googleusercontent.com/vrs9QQf6TdsDIofKS539BVFACDWnUdYGK005Pu4USqZU8RxudVA1trFADiMLbHSo_55vLDCEKyY3HSBfs1cZfxDLZBDgPuTO54zsycfJiAhXdKUeHAIfhFErnSgXk-0Lte1joQAQ)![img](https://lh6.googleusercontent.com/Ji_B_TttOYCO2IP5F5irQK0JlD5IWj7sMYfjWg_sUodGqHQkaf4J_sEXmv3GWzKCf3vxc4ZQZBTSvdwO4syBTUsLGjFEBIZAbPm2B3ghwDfUarDb5wiedstsjy8z5h4y_rOWroIc)![img](https://lh5.googleusercontent.com/7WSfZxA7NE8G6Y8ccH5VAJzXy3fCN8kY1T_2v3rhOQw91sMqHeXz-Yhq6IneF1jFgU0FXTA-xuS2bTnKvePJGYo9y2Y5FATtIolzsWbX5ZStAFJAUAj7SJmMUCciAKuKAS46YCY9)![img](https://lh5.googleusercontent.com/4DDaRiWzbCS9MY9HjGFymTx8G3n2A3AyfjVIoqwg1U-zud6mpn6kmYeXLamjfk50mZljSbinjpNSLh9yjc3AKFeUA7fl0CNmWQW-d_Isp4y6QO3kaaK6XIwknl-bCCwjbghasunS)1. 
+![img](https://lh5.googleusercontent.com/zZMAALMJsHi5TOu-SikN2rzuD7CXyZaLw2Bsk04eTkrfGWmrJbdZO6nysJFkACgxfkajOl7U40APc9NepDLJP1i2aw6x4vfnsKFklC2ytFt3IRFAVcHVYkFNf7RkrawzygZpJwLT)
+![img](https://lh6.googleusercontent.com/vrs9QQf6TdsDIofKS539BVFACDWnUdYGK005Pu4USqZU8RxudVA1trFADiMLbHSo_55vLDCEKyY3HSBfs1cZfxDLZBDgPuTO54zsycfJiAhXdKUeHAIfhFErnSgXk-0Lte1joQAQ)
+![img](https://lh6.googleusercontent.com/Ji_B_TttOYCO2IP5F5irQK0JlD5IWj7sMYfjWg_sUodGqHQkaf4J_sEXmv3GWzKCf3vxc4ZQZBTSvdwO4syBTUsLGjFEBIZAbPm2B3ghwDfUarDb5wiedstsjy8z5h4y_rOWroIc)
+![img](https://lh5.googleusercontent.com/7WSfZxA7NE8G6Y8ccH5VAJzXy3fCN8kY1T_2v3rhOQw91sMqHeXz-Yhq6IneF1jFgU0FXTA-xuS2bTnKvePJGYo9y2Y5FATtIolzsWbX5ZStAFJAUAj7SJmMUCciAKuKAS46YCY9)
+![img](https://lh5.googleusercontent.com/4DDaRiWzbCS9MY9HjGFymTx8G3n2A3AyfjVIoqwg1U-zud6mpn6kmYeXLamjfk50mZljSbinjpNSLh9yjc3AKFeUA7fl0CNmWQW-d_Isp4y6QO3kaaK6XIwknl-bCCwjbghasunS)1. 
 
    1. Added pull to refresh feature
    2. Added similar design to announcements and conferences seen in Dashboard
    3. Added Searchbar in every list
    4. Added files (downloadable), whose icons will change depending on the extension of the file
 
-   **Downloads![img](https://lh5.googleusercontent.com/a72MbOR1gYJJGKecJZ3Pghw5gMgJJLuhk4zKeu9IFAS9KSH3tOAlfHsOcgYKD4LJMH-llfhnuJIZuq0qN3GEyGV_bkxEzW9cnpO3sFDQFgHjXidMFbcEPJ6jq0sSQKp_UG8UDrEJ)![img](https://lh4.googleusercontent.com/sl_KubGEGBZ0lbV-mhtYzRES4oKBSqoHTtGhiQuzOAZT5eHiydomnGLM1jAQpYJ7Kzo6VRSpBF3pKXotIMwVaof0Jh17SKfwxqFF6AeD59c1pPCuXQ7rcoxD9pH5LLDhhxhOsuYy)![img](https://lh6.googleusercontent.com/ffQI-Uvez1iPh3w40rsybcYhvqg0lZKT3ASEJfUuMOkSgtAS-1UkRZWZnMOLghDAzJ9Nvk0AJCyw5M7ZPfhzCsX8NN-zzVZoN4eanAdFXBEJz3moWOtSH0-PyG-2uiIiJNLLE0zy)![img](https://lh4.googleusercontent.com/aiNFiPOPdZVmp0aX40xLx6y_M62svHmp_j_MVBiQSlTbH9fWTH2wiqiYf2qkrVr_oR9YXhbeb88Qt8hxSPpwPHKO9dm9Wg19E-NgxWv2cTygYfiFlzkhuqi9hjb2DTb4pZoZXuxX)**
+   **Downloads**
+   
+![img](https://lh5.googleusercontent.com/a72MbOR1gYJJGKecJZ3Pghw5gMgJJLuhk4zKeu9IFAS9KSH3tOAlfHsOcgYKD4LJMH-llfhnuJIZuq0qN3GEyGV_bkxEzW9cnpO3sFDQFgHjXidMFbcEPJ6jq0sSQKp_UG8UDrEJ)
+![img](https://lh4.googleusercontent.com/sl_KubGEGBZ0lbV-mhtYzRES4oKBSqoHTtGhiQuzOAZT5eHiydomnGLM1jAQpYJ7Kzo6VRSpBF3pKXotIMwVaof0Jh17SKfwxqFF6AeD59c1pPCuXQ7rcoxD9pH5LLDhhxhOsuYy)
+![img](https://lh6.googleusercontent.com/ffQI-Uvez1iPh3w40rsybcYhvqg0lZKT3ASEJfUuMOkSgtAS-1UkRZWZnMOLghDAzJ9Nvk0AJCyw5M7ZPfhzCsX8NN-zzVZoN4eanAdFXBEJz3moWOtSH0-PyG-2uiIiJNLLE0zy)
+![img](https://lh4.googleusercontent.com/aiNFiPOPdZVmp0aX40xLx6y_M62svHmp_j_MVBiQSlTbH9fWTH2wiqiYf2qkrVr_oR9YXhbeb88Qt8hxSPpwPHKO9dm9Wg19E-NgxWv2cTygYfiFlzkhuqi9hjb2DTb4pZoZXuxX)**
 
    1. Refined the UI design of the Downloads tab
 
@@ -105,7 +137,9 @@ video link: https://drive.google.com/file/d/117pu0us7uZf91ahyFrj7yLDdKCTZATnA/vi
 
       **Tasks**
 
-      **![img](https://lh6.googleusercontent.com/PeLrUwGT2K3QIUq3dEaPgeqJxT7Un9d-dW_5nM8W4CA7dDqJoYpen5Wn5qfq1LFPDF_H0jtBGcyDeE4ARkLof3ONiY8qYQW5JNzPQvsgc5V9QsItRZgLMyPPmR9_ADq-3wx0NgZJ)![img](https://lh6.googleusercontent.com/-v_ttvKVOVj-EzQVmjz9lm8msKEvApi5IT6Le1rD25bfPp15iYOsQJHhkEeqH3MIjK3vt-PHoSjHDNhOgooVxndX2VIr0TUlzppo0NtKxhuVougZFGvoFxbI9YaMWmqe93Gl0JRY)![img](https://lh4.googleusercontent.com/vCwnt0duTIUNv6w4zTW0TLCpYagdM_5bdwhw4K5Nf_7HRATJ1snvW21QMelAVt2fPZ4aAPPEnB7oKwBNWrLzX06En6a3ZLwbrzoL4b9IsGQFx5XxM78EzDJ1RM7tqhqRXnzWZZfV)1. Refine the UI Design of task managerAdded search bar to search for tasks
+      ![img](https://lh6.googleusercontent.com/PeLrUwGT2K3QIUq3dEaPgeqJxT7Un9d-dW_5nM8W4CA7dDqJoYpen5Wn5qfq1LFPDF_H0jtBGcyDeE4ARkLof3ONiY8qYQW5JNzPQvsgc5V9QsItRZgLMyPPmR9_ADq-3wx0NgZJ)
+      ![img](https://lh6.googleusercontent.com/-v_ttvKVOVj-EzQVmjz9lm8msKEvApi5IT6Le1rD25bfPp15iYOsQJHhkEeqH3MIjK3vt-PHoSjHDNhOgooVxndX2VIr0TUlzppo0NtKxhuVougZFGvoFxbI9YaMWmqe93Gl0JRY)
+      ![img](https://lh4.googleusercontent.com/vCwnt0duTIUNv6w4zTW0TLCpYagdM_5bdwhw4K5Nf_7HRATJ1snvW21QMelAVt2fPZ4aAPPEnB7oKwBNWrLzX06En6a3ZLwbrzoL4b9IsGQFx5XxM78EzDJ1RM7tqhqRXnzWZZfV)1. Refine the UI Design of task managerAdded search bar to search for tasks
 
       2. Added notification feature to notify user when the deadline is near, and user can complete the task right in the notification center![img](https://lh4.googleusercontent.com/vgF9alBeEfgVrtBPzMOdgwKrRiByYO6Tq2KK1og6DkU67ymI_J63F3jybhlfFzyU9t0C3KBdZs72zv3NtiwS0Wb-O10tPvys6XR3-jwYfKMZCXIVrkAGex-hq4-SJFwgVfWnQfzG)
          
