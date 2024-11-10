@@ -4,7 +4,9 @@ Orbital Project by SaturnV @ 2020 NUS
 ![Lunaris-Logo](https://user-images.githubusercontent.com/61874388/142764140-114c4524-27cf-4ab3-bb1c-5838d4e6fa27.png)
 
 
-**Video Demo**: https://drive.google.com/file/d/117pu0us7uZf91ahyFrj7yLDdKCTZATnA/view?usp=sharing
+**Video Demo:**
+[![Lunaris Demo](https://img.youtube.com/vi/5-S0dbmWLKM/0.jpg)](https://www.youtube.com/watch?v=5-S0dbmWLKM)
+
 
 **Team Name:** SaturnV
 **Proposed Level of Achievement:** Apollo 11
